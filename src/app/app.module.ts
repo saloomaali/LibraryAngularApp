@@ -48,6 +48,10 @@ const myRouter:Routes = [
   {
     path:"delete",
     component:DeleteBookComponent
+  },
+  {
+    path:"issue",
+    component:IssueBookComponent
   }
 ]
 
@@ -68,7 +72,7 @@ const myRouter:Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule.forRoot(myRouter)
   ],
   providers: [],
   bootstrap: [AppComponent]
