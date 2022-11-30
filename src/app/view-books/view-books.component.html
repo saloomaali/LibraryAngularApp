@@ -3,13 +3,12 @@
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3 mt-4">
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor = "let i of books">
                     <div class="card">
-                        <img height="300px" src="https://api.time.com/wp-content/uploads/2020/11/best-books-2020-Actress.jpg?quality=85&w=600&h=600&crop=1" class="card-img-top" alt="...">
+                        <img height="300px" width="200px" src="{{i.image}}" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">ACTRESS</h5>
-                          <p class="card-text"><strong>Author</strong> : Anne Enright </p>
-                          <p class="card-text"><strong>Description</strong> : In Actress, Enright creates a specific sense of time and place by undercutting the glamour of post-war Hollywood with the darkness of winters in 1970s Dublin, and exploring the uglier side of what fame brings to families and relationships. </p>
+                          <h5 class="card-title">{{i.title}}</h5>
+                          <p class="card-text">{{i.description}}</p>
                           <a href="#" class="btn btn-primary">Get</a>
                         </div>
                       </div>
