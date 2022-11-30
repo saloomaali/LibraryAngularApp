@@ -14,6 +14,7 @@ import { DeleteBookComponent } from './delete-book/delete-book.component';
 import { RouterModule, Routes } from '@angular/router';
 import { IssueBookComponent } from './issue-book/issue-book.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
 
 
 const myRouter:Routes = [
@@ -74,7 +75,8 @@ const myRouter:Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myRouter)
+    RouterModule.forRoot(myRouter),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

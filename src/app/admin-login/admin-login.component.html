@@ -5,14 +5,14 @@
             <div class="row g-3 mt-4">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form label">Username</label>
-                    <input type="text" class="form-control">
+                    <input name="username" [(ngModel)] = "username" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form label">Password</label>
-                    <input type="password" name="" id="" class="form-control">
+                    <input name="password" [(ngModel)] = "password" type="password" name="" id="" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <button class="btn btn-primary">Login</button>
+                    <button (click) = "adminloginValue()" class="btn btn-primary">Login</button>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
                     <a class="btn btn-primary" routerLink ="/register">User Registration</a>

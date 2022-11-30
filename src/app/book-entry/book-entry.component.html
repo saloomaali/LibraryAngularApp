@@ -5,7 +5,7 @@
             <div class="row g-3 mt-4">
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Book Title</label>
-                    <input type="text" class="form-control">
+                    <input name="title" [(ngModel)]  = "title" type="text" class="form-control">
 
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
@@ -15,35 +15,35 @@
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Description</label>
-                    <textarea name="" id="" cols="20" rows="5" class="form-control"></textarea>
+                    <textarea name="description" [(ngModel)] = "description" id="" cols="20" rows="5" class="form-control"></textarea>
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Publisher</label>
-                    <input type="text" class="form-control">
+                    <input name="publisher" [(ngModel)] = "publisher" type="text" class="form-control">
 
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-conrol">Language</label>
-                    <input type="text" class="form-control">
+                    <input name="language" [(ngModel)] = "language" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Distributer</label>
-                    <input type="text" class="form-control">
+                    <input name="distributer" [(ngModel)] = "distributer" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="fomr-label">Release Year</label>
-                    <input type="text" class="form-control">
+                    <input name="releaseYear" [(ngModel)] = "releaseYear" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Price</label>
-                    <input type="text" class="form-control">
+                    <input name="price" [(ngModel)] = "price" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <lable class="form-label">Book Image</lable>
-                    <input type="file" name="" id="" class="form-control">
+                    <label class="form-label">Book Image</label>
+                    <input name="image" [(ngModel)]  = "image" type="file" name="" id="" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <button class="btn btn-success"> Add </button>
+                    <button (click) = "bookValue()" class="btn btn-success"> Add </button>
                 </div>
             </div>
         </div>
