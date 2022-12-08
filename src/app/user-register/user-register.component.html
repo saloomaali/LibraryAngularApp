@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<app-user-navbar></app-user-navbar>
 <div class="container">
     <div class="row mt-4">
     
@@ -59,24 +59,24 @@
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 12-xxl-12">
                     
                     <label for="" class="form label">Password</label>
-                    <input  type="password" name="password" [(ngModel)] = "password" id="" class="form-control">
+                    <input  type="password" name="password" [(ngModel)] = "password"  class="form-control">
                 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     
                     <label for="" class="form label">Confirm Password</label>
-                    <input type="password" name="confirmPassword" [(ngModel)] = "confirmPassword"  id="" class="form-control">
+                    <input type="password" name="confirmPassword" [(ngModel)] = "confirmPassword" class="form-control">
                 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
                     
                     
-                    <button (click) = "userRegisterValue()" class="btn btn-success">Register</button>
+                    <button (click) = "userRegisterValue()" class="btn btn-dark">Register</button>
                 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
                     
-                    <a class="btn btn-primary" routerLink ="/userlogin">Back to User Login</a>
+                    <a routerLink ="/userlogin">Back to User Login</a>
                     
                 
                 </div>

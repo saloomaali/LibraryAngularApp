@@ -15,7 +15,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { IssueBookComponent } from './issue-book/issue-book.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
+import { UserNavbarComponent } from './user-navbar/user-navbar.component';
+import { ViewNavbarComponent } from './view-navbar/view-navbar.component'
 
 const myRouter:Routes = [
   {
@@ -70,13 +72,16 @@ const myRouter:Routes = [
     EditBookComponent,
     DeleteBookComponent,
     IssueBookComponent,
-    NavbarComponent
+    NavbarComponent,
+    UserNavbarComponent,
+    ViewNavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(myRouter),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

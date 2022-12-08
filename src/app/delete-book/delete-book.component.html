@@ -5,10 +5,23 @@
             <div class="row g-3 mt-4">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Book Title</label>
-                    <input name = "bookTitle" [(ngModel)] ="bookTitle" type="text" class="form-control">
+                    <input name = "title" [(ngModel)] ="title" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <button (click) = "bookTitleValue()" class="btn btn-danger">Delete</button>
+                    <button (click) = "bookTitleValue()" class="btn btn-dark">SEARCH</button>
+                </div>
+            </div>
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor = "let i of searchData">
+                    <div class="card" style="height: 40rem;">
+                        <img height="300px" width="200px" src={{i.image}}  class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">{{i.title}} </h5>
+                          <p class="card-text">Description : {{i.description}} </p>
+                          <p class="card-text">Price : {{i.price}} </p>
+                          <a (click) = "deletebtn(i.id)" class="btn btn-danger">DELETE</a>
+                        </div>
+                      </div>
                 </div>
             </div>
         </div>
