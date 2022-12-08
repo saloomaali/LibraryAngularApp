@@ -1,8 +1,16 @@
-<app-navbar></app-navbar>
+
 <div class="container">
-    <div class="row">
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <div class="row g-3 mt-4">
+    <div class="row g-3 mt-4">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+            <h1>ADMIN LOGIN</h1>
+        </div>
+    </div>
+    <div class="row g-3 ">
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <img src="assets/images/admin.png" height="600px" width="700px" alt="">
+        </div>
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="row g-4 mt-4">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form label">Username</label>
                     <input name="username" [(ngModel)] = "username" type="text" class="form-control">
@@ -12,13 +20,13 @@
                     <input name="password" [(ngModel)] = "password" type="password" name="" id="" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <button (click) = "adminloginValue()" class="btn btn-primary">Login</button>
+                    <button (click) = "adminloginValue()" class="btn btn-dark">Login</button>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <a class="btn btn-primary" routerLink ="/register">User Registration</a>
+                    <a  routerLink ="/register">User Registration</a>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center ">
-                    <a class="btn btn-primary" routerLink ="/userlogin">User Login</a>
+                    <a  routerLink ="/userlogin">User Login</a>
                 </div>
 
             </div>

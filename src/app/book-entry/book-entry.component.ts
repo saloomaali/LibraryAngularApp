@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-book-entry',
@@ -17,6 +18,8 @@ export class BookEntryComponent {
   releaseYear = ""
   price = ""
 
+  constructor(private api:ApiService){}
+
   bookValue = () =>{
 
    let data:any = {
@@ -34,5 +37,20 @@ export class BookEntryComponent {
   
     }
     console.log(data);
+
+    this.api.addBook(data).subscribe(
+
+      (response:any)=>{
+        console.log(response)
+
+        if (response.status == "success") {
+
+          alert("Book added successfully")
+          window.location.reload()
+          
+        }
+      }
+
+    )
   }
 }

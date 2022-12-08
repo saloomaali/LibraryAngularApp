@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-search-book',
@@ -7,11 +8,36 @@ import { Component } from '@angular/core';
 })
 export class SearchBookComponent {
 
-   bookTitle = ""
+   title = ""
+
+   constructor(private api:ApiService){}
+
+   searchData:any = []
+
 
   bookTitleValue=()=>
   {
-    let data:any = {"bookTitle":this.bookTitle}
+    let data:any = {"title":this.title}
     console.log(data)
+
+    this.api.searchBook(data).subscribe(
+
+      (response:any)=>{
+
+        if (response.length == 0) {
+
+          alert("No book found")
+          window.location.reload()
+
+          
+        } else {
+
+          this.searchData = response
+          
+        }
+
+      }
+
+    )
   }
 }

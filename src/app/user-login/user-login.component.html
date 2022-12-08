@@ -1,7 +1,15 @@
-<app-navbar></app-navbar>
+<app-user-navbar></app-user-navbar>
 <div class="container">
-    <div class="row">
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+    <div class="row g-3 mt-4">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+            <h1>USER LOGIN</h1>
+        </div>
+    </div>
+    <div class="row g-4 mt-4 ">
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <img src="assets/images/userlogin.png" height="600px" width="600px" alt="">
+        </div>
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <div class="row g-3 g-4">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
@@ -17,16 +25,17 @@
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
 
-                    <button (click) = "userloginValue()" class="btn btn-primary">Login</button>
+                    <button (click) = "userloginValue()" class="btn btn-dark">Login</button>
 
                 </div>
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <a class="btn btn-danger" routerLink ="/register">Go to User Registration</a>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <a  routerLink ="/register">Go to User Registration</a>
                 </div>
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <a class="btn btn-danger" routerLink ="/">Back to Administrator Login</a>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <a  routerLink ="/">Back to Administrator Login</a>
                 </div>
             </div>
         </div>
     </div>
+  
 </div>
